@@ -1,0 +1,2 @@
+class FrenchDesserts::CLI
+end
