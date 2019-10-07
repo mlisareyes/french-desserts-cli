@@ -8,7 +8,7 @@ module FrenchDesserts
 end
 
 ### REQUIRED FILES ###
-require_relative "./FrenchDesserts/version"
-require_relative "./FrenchDesserts/dessert-descriptionß"
-require_relative "./FrenchDesserts/scraper"
-require_relative "./FrenchDesserts/cli"
+require_relative "./desserts/version"
+require_relative "./desserts/dessert-description"
+require_relative "./desserts/scraper"
+require_relative "./desserts/cli"
