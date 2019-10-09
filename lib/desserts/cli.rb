@@ -1,6 +1,6 @@
 class FrenchDesserts::CLI
 
-  def call
+  def start
     puts "Bonjour! Welcome to Lisa's French Patisserie!"
     puts ""
     main_menu
