@@ -1,6 +1,9 @@
+require 'pry'
 class FrenchDesserts::CLI
 
   def start
+    doc = Nokogiri::HTML(open("https://www.epicurious.com/recipes-menus/easy-french-desserts-quick-simple-recipes-gallery"))
+    binding.pry
     puts "Bonjour! Welcome to Lisa's French Patisserie!"
     puts ""
     main_menu
