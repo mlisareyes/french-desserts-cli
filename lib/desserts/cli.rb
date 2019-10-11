@@ -5,7 +5,7 @@ class Desserts::CLI
     puts ""
     puts "Bonjour! Welcome to Lisa's French Patisserie!"
     puts ""
-    Desserts::Dessert.scrape_desserts
+    Desserts::Dessert.test
     main_menu
   end
 
@@ -27,11 +27,11 @@ class Desserts::CLI
 
   def list_desserts
     puts "Listing desserts..."
-    desserts = FrenchDesserts::Desserts.all
+    Desserts::Dessert.scrape_desserts
+    desserts = Desserts::Dessert.all
     desserts.each.with_index do |dessert, index|
       puts "#{index + 1}. #{dessert.name}"
     end
-    input = gets.chomp
   end
 
     #input = gets.chomp
