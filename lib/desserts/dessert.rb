@@ -2,7 +2,7 @@ require 'pry'
 class Desserts::Dessert
   attr_accessor :name, :description
 
-  def initialize(name:, description:)
+  def initialize(name:, description:) #mass assignment?
     @name = name
     @description = description
   end
@@ -26,7 +26,7 @@ class Desserts::Dessert
 
   def self.test
 
-    binding.pry
+    #binding.pry
   end
 
 end
