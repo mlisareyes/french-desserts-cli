@@ -1,19 +1,19 @@
 require 'pry'
-class FrenchDesserts::CLI
+class Desserts::CLI
 
   def start
-    #doc = Nokogiri::HTML(open("https://www.epicurious.com/recipes-menus/easy-french-desserts-quick-simple-recipes-gallery"))
-    #binding.pry
-    binding.pry
+    puts ""
     puts "Bonjour! Welcome to Lisa's French Patisserie!"
     puts ""
-    FrenchDesserts::Scraper.scrape_desserts
+    Desserts::Dessert.scrape_desserts
     main_menu
   end
 
   def main_menu
+    puts ""
     puts "Type 'list' to see a list of our desserts."
     puts "Type 'exit' to exit program."
+    puts ""
     input = gets.chomp
     if input.downcase == "list"
       list_desserts
@@ -27,10 +27,9 @@ class FrenchDesserts::CLI
 
   def list_desserts
     puts "Listing desserts..."
-    FrenchDesserts::Scraper.scrape_desserts
     desserts = FrenchDesserts::Desserts.all
-    desserts.each.with_index(1) do |board, index|
-      puts "#{index}. #{dessert.name}"
+    desserts.each.with_index do |dessert, index|
+      puts "#{index + 1}. #{dessert.name}"
     end
     input = gets.chomp
   end

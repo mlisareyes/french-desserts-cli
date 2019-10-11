@@ -1,4 +1,5 @@
-class FrenchDesserts::Desserts
+require 'pry'
+class Desserts::Dessert
   attr_accessor :name, :description
 
   @@all = []
@@ -18,8 +19,9 @@ class FrenchDesserts::Desserts
       doc.css("div.gallery-slide-caption").map do |dessert|
         {
           name: dessert.css("h2.gallery-slide-caption__hed").text,
-          description:  dessert.css("p").text
+          description: dessert.css("p").text
         }
+        binding.pry
     end
   end
 end

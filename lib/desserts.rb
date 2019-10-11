@@ -4,7 +4,7 @@ require 'nokogiri'
 require 'pry'
 
 ### NAMESPACE MODULE ###
-module FrenchDesserts
+module Desserts
 end
 
 ### REQUIRED FILES ###
