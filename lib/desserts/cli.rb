@@ -32,6 +32,8 @@ class Desserts::CLI
     desserts.each.with_index do |dessert, index|
       puts "#{index + 1}. #{dessert.name}"
     end
+    puts ""
+    puts "Please enter a number to view the details of the dessert:"
 
     input = gets.chomp
 
