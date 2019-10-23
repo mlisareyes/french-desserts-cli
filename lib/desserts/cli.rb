@@ -19,6 +19,8 @@ class Desserts::CLI
       list_desserts
     elsif input.downcase == "exit"
       puts "Thank you for visiting Lisa's French Patisserie! Au revoir!"
+    elsif input.downcase == "random"
+      puts "random"
     else
       invalid
       main_menu
@@ -42,6 +44,9 @@ class Desserts::CLI
       dessert = Desserts::Dessert.all[index]
         puts "#{dessert.name}: #{dessert.description}"
         ask_again
+      elsif input.downcase == "random"
+        dessert = Desserts::Dessert.all.sample
+        puts "#{dessert.name}: #{dessert.description}"
     else
       invalid
       main_menu
